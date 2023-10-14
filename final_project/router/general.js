@@ -115,7 +115,7 @@ public_users.get('/', async function (req, res) {
   public_users.get('/isbn/:isbn', async function (req, res) {
     const isbn = req.params.isbn;
     try {
-      const response = await axios.get(`http://localhost:5000//${isbn}`); // Replace with the actual API URL
+      const response = await axios.get(`http://localhost:5000/${isbn}`); // Replace with the actual API URL
       const book = response.data;
       return res.status(200).json(book);
     } catch (error) {
